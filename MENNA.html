@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Photos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>MENNA</h1>
+    </div>
+
+    <!-- معرض الصور -->
+    <div class="gallery" id="gallery">
+        <img src="IMG-20240713-WA0005.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0007.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0009.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0011.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0013.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0015.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0017.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0019.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0021.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0023.jpg" alt="Family Photo" onclick="openModal(this.src)">
+
+
+
+
+
+
+    </div>
+
+
+    <!-- النافذة المنبثقة -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById('myModal').style.display = "flex";
+            document.getElementById("img01").src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // خلط عناصر المعرض
+        function shuffleGallery() {
+            var gallery = document.getElementById('gallery');
+            Array.from(gallery.children).sort(() => Math.random() - 0.5).forEach(child => gallery.appendChild(child));
+        }
+
+        window.onload = shuffleGallery;
+    </script>
+</body>
+</html>
