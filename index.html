@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Photos and Videos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        input[type="password"], input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 300px;
+            outline: none;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+        input[type="password"]:focus {
+            border-color: #72EDF2;
+            box-shadow: 0 0 10px rgba(114, 237, 242, 0.5);
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #5151E5;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #72EDF2;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (password === "") {
+                errorMessage.textContent = " please enter password";
+            } else if (password === "fa12") {
+                window.location.href = "home page.html";
+            } else {
+                errorMessage.textContent = "Incorrect password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Family Photos and Videos</h1>
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="submit" value="Submit" onclick="checkPassword()">
+        <div id="error-message" class="error-message"></div>
+    </div>
+</body>
+</html>
+
