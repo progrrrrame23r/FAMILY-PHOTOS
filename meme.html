@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Photos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
-        <h1>ميمي</h1>
+        <h1>MEME</h1>
     </div>
 
     <!-- معرض الصور -->
     <div class="gallery" id="gallery">
-        <img src="E:/A family web/photos family/codes/Family photo/IMG-20240713-WA0061.jpg" alt="Family Photo" onclick="openModal(this.src)">
-        <img src="E:/A family web/photos family/codes/Family photo/IMG-20240713-WA0055.jpg" alt="Family Photo" onclick="openModal(this.src)">
-        <img src="E:/A family web/photos family/codes/Family photo/IMG-20240713-WA0056.jpg" alt="Family Photo" onclick="openModal(this.src)">
-        <img src="E:/A family web/photos family/codes/Family photo/IMG-20240713-WA0059.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        
+
+        <img src="IMG-20240713-WA0061.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0055.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0056.jpg" alt="Family Photo" onclick="openModal(this.src)">
+        <img src="IMG-20240713-WA0059.jpg" alt="Family Photo" onclick="openModal(this.src)">
         <img src="IMG-20240713-WA0107.jpg" alt="Family Photo" onclick="openModal(this.src)">
         <img src="IMG-20240713-WA0110.jpg" alt="Family Photo" onclick="openModal(this.src)">
         <img src="IMG-20240713-WA0112.jpg" alt="Family Photo" onclick="openModal(this.src)">
@@ -37,8 +40,6 @@
 
 
 
-
-
     </div>
 
 
@@ -46,6 +47,10 @@
     <div id="myModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+        <a id="downloadBtn" class="download-btn" download>Download</a>
     </div>
 
     <script>
@@ -66,5 +71,6 @@
 
         window.onload = shuffleGallery;
     </script>
+    <script src="phr.js"></script>
 </body>
 </html>
